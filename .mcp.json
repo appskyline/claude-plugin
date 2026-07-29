@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "appskyline": {
+      "type": "http",
+      "url": "https://mcp.appskyline.com/mcp"
+    }
+  }
+}
