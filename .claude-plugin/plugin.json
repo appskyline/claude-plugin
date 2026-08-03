@@ -1,7 +1,7 @@
 {
   "name": "appskyline",
   "description": "App Store Optimization research across the iOS App Store, macOS App Store, Google Play and Microsoft Store. Bundles the AppSkyline connector with skills for keyword research, rank tracking and store-listing audits.",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "author": {
     "name": "Waiterio LLC",
     "email": "info@appskyline.com",

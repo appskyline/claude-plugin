@@ -28,11 +28,11 @@ Or install it from the plugin directory in claude.ai and Cowork.
 
 ## What you can ask
 
-- "Where does my app rank for *dental software* on the US App Store?"
+- "Where does my app rank for _dental software_ on the US App Store?"
 - "Give me an ASO report for my app."
 - "Which of my tracked keywords have real search volume?"
 - "Audit my App Store metadata — am I wasting keyword-field characters?"
-- "Who ranks above me for *restaurant pos*, and what does their listing say?"
+- "Who ranks above me for _restaurant pos_, and what does their listing say?"
 
 ## What it contains
 
@@ -40,7 +40,7 @@ Or install it from the plugin directory in claude.ai and Cowork.
   workflow: which identifier each tool takes, how to read a rank result
   honestly, when a single rank is noise, and how to batch the billable
   search-volume lookup.
-- **AppSkyline MCP connector** — thirteen tools. Eleven read-only; two
+- **AppSkyline MCP connector** — fourteen tools. Twelve read-only; two
   (`add_keyword`, `delete_keyword`) modify your tracked keywords and prompt for
   approval before running.
 

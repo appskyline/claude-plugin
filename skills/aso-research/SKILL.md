@@ -1,11 +1,17 @@
 ---
 name: aso-research
 description: Research and improve an app's App Store Optimization standing using AppSkyline — keyword ranks and history across the iOS App Store, macOS App Store, Google Play and Microsoft Store, search-volume and difficulty lookups, store-listing metadata audits against Apple's character limits, competitor listings, and engagement/review signals. Use when asked for an ASO report, to check where an app ranks for a keyword, to find keywords worth targeting, to audit or improve store metadata, or to compare an app against competitors.
+license: Apache-2.0
+compatibility: Requires the AppSkyline MCP connector (https://mcp.appskyline.com/mcp) and an AppSkyline account with at least one tracked app
+metadata:
+  author: Appskyline
+  version: '1.1.0'
+  repository: https://github.com/appskyline/skills
 ---
 
 # ASO research with AppSkyline
 
-This skill drives the AppSkyline MCP connector. Every tool below is provided by
+This guide drives the AppSkyline MCP connector. Every tool below is provided by
 that connector, so the user must have connected AppSkyline and be signed in to
 an account with access to at least one tracked app. If a tool call fails with an
 authorization error, tell the user to connect AppSkyline rather than retrying.
@@ -25,7 +31,7 @@ on rather than retrying with different parameters.
 
 Getting these confused is the most common source of empty results.
 
-- **`appId`** is the AppSkyline app id (a uuid). Every tool that reads *your*
+- **`appId`** is the AppSkyline app id (a uuid). Every tool that reads _your_
   data takes this: `get_app`, `list_keywords`, `get_keyword_rank`,
   `get_keyword_history`, `get_store_metadata`, `get_app_engagement_summary`,
   `list_google_play_reviews`, `add_keyword`.
@@ -41,31 +47,32 @@ app's id, name, default locale, and per-store ids.
 
 Reading your own data:
 
-| Tool | Use it for |
-|---|---|
-| `list_apps` | Every app the signed-in account can access, with per-store ids |
-| `get_app` | One app's metadata, locales, per-store ids, timestamps |
-| `list_keywords` | Tracked keywords for an app: id, term, language, country, bid |
-| `get_keyword_rank` | Where an app ranks right now for one term in one store + country |
-| `get_keyword_history` | Day-by-day rank timeseries for an app, term, and country |
-| `get_store_metadata` | Synced listing metadata per locale, with Apple keyword-field character counts |
+| Tool                         | Use it for                                                                        |
+| ---------------------------- | --------------------------------------------------------------------------------- |
+| `list_apps`                  | Every app the signed-in account can access, with per-store ids                    |
+| `get_app`                    | One app's metadata, locales, per-store ids, timestamps                            |
+| `list_keywords`              | Tracked keywords for an app: id, term, language, country, bid                     |
+| `get_keyword_rank`           | Where an app ranks right now for one term in one store + country                  |
+| `get_keyword_history`        | Day-by-day rank timeseries for an app, term, and country                          |
+| `get_store_metadata`         | Synced listing metadata per locale, with Apple keyword-field character counts     |
 | `get_app_engagement_summary` | Downloads, installs, uninstalls, crashes over a date window, plus top territories |
-| `list_google_play_reviews` | Recent Play reviews: rating, text, version, device, developer-reply state |
+| `list_google_play_reviews`   | Recent Play reviews: rating, text, version, device, developer-reply state         |
+| `show_app_overview`          | Interactive summary of one app, connected stores, and up to 50 tracked keywords   |
 
 Reading public or shared data:
 
-| Tool | Use it for |
-|---|---|
-| `search_store_results` | Live ranked search results for a term — the competitive field |
+| Tool                   | Use it for                                                                |
+| ---------------------- | ------------------------------------------------------------------------- |
+| `search_store_results` | Live ranked search results for a term — the competitive field             |
 | `get_keyword_overview` | Monthly search volume, difficulty, CPC and competition for up to 50 terms |
-| `get_store_listing` | Any app's public listing by store-native id — competitor research |
+| `get_store_listing`    | Any app's public listing by store-native id — competitor research         |
 
 Writing:
 
-| Tool | Use it for |
-|---|---|
-| `add_keyword` | Start tracking a term. Non-idempotent — see below |
-| `delete_keyword` | Stop tracking a term by keyword id. Idempotent |
+| Tool             | Use it for                                        |
+| ---------------- | ------------------------------------------------- |
+| `add_keyword`    | Start tracking a term. Non-idempotent — see below |
+| `delete_keyword` | Stop tracking a term by keyword id. Idempotent    |
 
 ## Batch `get_keyword_overview`; never loop it
 
