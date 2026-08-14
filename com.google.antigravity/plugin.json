@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "appskyline",
+  "description": "App Store Optimization research across the iOS App Store, macOS App Store, Google Play and Microsoft Store. Bundles the AppSkyline connector with skills for keyword research, rank tracking and store-listing audits."
+}

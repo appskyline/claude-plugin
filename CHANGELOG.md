@@ -1,19 +1,28 @@
 # Changelog
 
-All notable changes to the AppSkyline Claude plugin are documented here.
+All notable changes to the AppSkyline agent plugin are documented here.
 
 This project follows [Semantic Versioning](https://semver.org). The public
 interface is the bundled skill's behaviour and the connector it configures:
 
-- **MAJOR** — a skill is removed, or `.mcp.json` changes in a way that breaks
-  existing installs.
-- **MINOR** — a new skill, or coverage of newly added connector tools.
+- **MAJOR** — a skill is removed, or a host's MCP configuration changes in a
+  way that breaks existing installs.
+- **MINOR** — a new skill, host adapter, or newly supported connector tool.
 - **PATCH** — wording, clarifications, and fixes that do not change what the
   plugin can do.
 
 Every published change needs a version bump. Claude Code keys plugin updates on
 the version string rather than the commit, so shipping new content under an
 unchanged version silently leaves installed users on the old copy.
+
+## 0.2.0
+
+- Add the portable Agent Plugins 1.0 `plugin.json` and `mcp.json` package.
+- Add a Gemini CLI extension manifest for Gallery discovery and direct install.
+- Add an Antigravity-native adapter under the standard client-extension
+  namespace `com.google.antigravity/`.
+- Keep the portable, Claude, Gemini, and Antigravity packages on one canonical
+  skill and production OAuth MCP endpoint.
 
 ## 0.1.2
 

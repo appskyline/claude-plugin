@@ -1,13 +1,14 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "appskyline",
-  "description": "App Store Optimization research across the iOS App Store, macOS App Store, Google Play and Microsoft Store. Bundles the AppSkyline connector with skills for keyword research, rank tracking and store-listing audits.",
   "version": "0.2.0",
+  "description": "App Store Optimization research across the iOS App Store, macOS App Store, Google Play and Microsoft Store. Bundles the AppSkyline connector with skills for keyword research, rank tracking and store-listing audits.",
   "author": {
     "name": "Waiterio LLC",
     "email": "info@appskyline.com",
     "url": "https://www.appskyline.com/"
   },
-  "homepage": "https://www.appskyline.com/developers/#claude-mcp",
+  "homepage": "https://www.appskyline.com/developers/#agent-plugins",
   "repository": "https://github.com/appskyline/claude-plugin",
   "license": "Apache-2.0",
   "keywords": [
