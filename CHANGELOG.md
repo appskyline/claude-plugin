@@ -15,6 +15,12 @@ Every published change needs a version bump. Claude Code keys plugin updates on
 the version string rather than the commit, so shipping new content under an
 unchanged version silently leaves installed users on the old copy.
 
+## 0.3.0
+
+- Add a Codex plugin manifest that uses the same skills and OAuth MCP endpoint.
+- Add repository-level `AGENTS.md` operating rules for coding agents and public
+  discovery crawlers.
+
 ## 0.2.0
 
 - Add the portable Agent Plugins 1.0 `plugin.json` and `mcp.json` package.

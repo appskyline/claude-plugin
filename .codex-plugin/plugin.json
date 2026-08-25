@@ -1,0 +1,33 @@
+{
+  "name": "appskyline",
+  "version": "0.3.0",
+  "description": "App Store Optimization research across four major app stores through the Appskyline MCP server.",
+  "author": {
+    "name": "Waiterio LLC",
+    "email": "info@appskyline.com",
+    "url": "https://www.appskyline.com/"
+  },
+  "homepage": "https://www.appskyline.com/developers/#agent-plugins",
+  "repository": "https://github.com/appskyline/claude-plugin",
+  "license": "Apache-2.0",
+  "keywords": ["aso", "app-store-optimization", "keyword-research", "rankings"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Appskyline",
+    "shortDescription": "Research app-store keywords and rankings.",
+    "longDescription": "Research App Store Optimization keywords, rankings, listings, engagement, and reviews across four major app stores.",
+    "developerName": "Waiterio LLC",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://www.appskyline.com/",
+    "privacyPolicyURL": "https://www.appskyline.com/privacy-policy/",
+    "termsOfServiceURL": "https://www.appskyline.com/terms-of-service/",
+    "defaultPrompt": [
+      "Audit my app's store listing.",
+      "Research keyword opportunities for my app.",
+      "Show how my tracked keyword ranks changed."
+    ],
+    "brandColor": "#009E75"
+  }
+}
