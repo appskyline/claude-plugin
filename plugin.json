@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "appskyline",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "App Store Optimization research across the iOS App Store, macOS App Store, Google Play and Microsoft Store. Bundles the AppSkyline connector with skills for keyword research, rank tracking and store-listing audits.",
   "author": {
     "name": "Waiterio LLC",

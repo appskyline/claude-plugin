@@ -15,6 +15,33 @@ Every published change needs a version bump. Claude Code keys plugin updates on
 the version string rather than the commit, so shipping new content under an
 unchanged version silently leaves installed users on the old copy.
 
+## 0.4.0
+
+- `aso-research` 1.2.0: documents the connector's new `suggest_store_metadata`
+  tool, which answers which tracked keywords belong in each app's title,
+  subtitle, keyword field or short description with drafts that already fit
+  each store's limits, and checks proposed wording. One call without an app
+  covers every app in its main market.
+- The skill now asks for concrete per-app text rather than a method, says to
+  rewrite list-like drafts naturally and check them again, and to suggest a
+  competitor-title word only when it describes the user's app, never a brand.
+- The standard ASO report audits the listing with `suggest_store_metadata`.
+
+## 0.3.1
+
+- `aso-research` 1.1.1: the tool tables now say when to use each tool in the
+  words users ask with, matching the connector's rewritten tool descriptions.
+- Synced store metadata is documented as also answering whether the latest
+  version is still in review or approved.
+- Keyword volume is documented as Google web-search demand, a proxy for
+  interest rather than a count of store searches.
+- Rank history is documented as one row per stored search snapshot (tracked
+  keywords are re-checked weekly), and new keywords need a country to be
+  re-checked at all.
+- Google Play reviews are documented as the last 7 days the Google Play API
+  returns.
+- Same fourteen connector tools; no new capability.
+
 ## 0.3.0
 
 - Add a Codex plugin manifest that uses the same skills and OAuth MCP endpoint.
